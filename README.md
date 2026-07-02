@@ -251,8 +251,8 @@ This project is licensed under the MIT License.
 
 **Prem Sharma**
 
-- GitHub: https://github.com/your-username
-- LinkedIn: https://linkedin.com/in/your-profile
+- GitHub: https://github.com/premmsharma122
+- LinkedIn: [https://linkedin.com/in/your-profile](https://www.linkedin.com/in/prem-sharma-0a4b62291/)
 
 ---
 
