@@ -12,7 +12,7 @@ export default function App() {
       <div 
         className="absolute inset-0 w-full h-full pointer-events-none z-0 bg-no-repeat bg-top"
         style={{
-          backgroundImage: `url('/src/assets/bg-tree.jpg')`,
+          backgroundImage: `url('/bg-tree.jpg')`,
           backgroundSize: '100% auto',
           // Drastically bumped opacity from 0.07 to 0.35 for high definition visibility
           opacity: '0.35', 
