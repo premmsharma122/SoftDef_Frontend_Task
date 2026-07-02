@@ -3,11 +3,11 @@ import { Play } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-8 md:px-14 pt-8 pb-20 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative">
+    <section className="max-w-7xl mx-auto px-8 md:px-14 pt-8 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative">
       
       {/* --- LEFT TEXT CONTENT --- */}
-      <div className="lg:col-span-7 space-y-6 z-10">
-        <h1 className="text-5xl md:text-7xl lg:text-[80px] font-medium tracking-tight text-white leading-none">
+      <div className="lg:col-span-7 space-y-6 pt-6">
+        <h1 className="text-5xl md:text-7xl lg:text-[76px] font-medium tracking-tight text-white leading-none">
           Earth’s Exhale
         </h1>
         
@@ -30,14 +30,14 @@ export default function Hero() {
           </button>
         </div>
 
-        {/* --- FLOATING TESTIMONIAL CARD (BOTTOM LEFT) --- */}
-        <div className="pt-10 max-w-sm">
-          <div className="bg-white/[0.04] backdrop-blur-md border border-white/[0.08] rounded-2xl p-5 space-y-3 shadow-xl">
+        {/* Floating Testimonial snippet inside layout */}
+        <div className="pt-12 max-w-xs">
+          <div className="bg-white/[0.02] backdrop-blur-md border border-white/[0.06] rounded-2xl p-5 space-y-3 shadow-xl">
             <div className="flex items-center gap-3">
               <img 
                 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" 
                 alt="Ronnie Hamill" 
-                className="w-9 h-9 rounded-full object-cover border border-white/20"
+                className="w-9 h-9 rounded-full object-cover border border-white/10"
               />
               <div>
                 <h4 className="text-xs font-semibold text-white tracking-wide">Ronnie Hamill</h4>
@@ -48,70 +48,59 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <p className="text-[11px] text-[#a2b4a7] leading-relaxed font-light">
+            <p className="text-[11px] text-[#8fa395] leading-relaxed font-light">
               I can't express how thrilled I am with my new natural plants! They bring such a fresh and vibrant energy to my home.
             </p>
           </div>
         </div>
       </div>
 
-      {/* --- RIGHT DISPLAY FEATURE & FLOATING CARDS --- */}
-      <div className="lg:col-span-5 relative flex justify-center items-center pt-12 lg:pt-0">
+      {/* --- RIGHT PRODUCT STACK OVERLAY --- */}
+      <div className="lg:col-span-5 relative flex justify-end items-start pt-12 lg:pt-0">
         
-        {/* Background Bush Circular Frame */}
-        <div className="relative w-[340px] h-[340px] md:w-[420px] md:h-[420px] flex items-center justify-center">
-          <img 
-            src="https://images.unsplash.com/photo-1512428813833-df70f75a6e82?auto=format&fit=crop&q=80&w=500" 
-            alt="Center Greenery" 
-            className="w-full h-full object-cover rounded-full filter brightness-75 scale-95"
-          />
+        {/* Main Floating Card Layout */}
+        <div className="w-[280px] md:w-[300px] bg-white/[0.02] backdrop-blur-xl border border-white/[0.07] rounded-[36px] p-5 shadow-2xl flex flex-col justify-between group relative">
           
-          {/* Middle Overlap Badges (Small overlapping avatar indicator) */}
-          <div className="absolute bottom-20 left-16 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-1">
-            <div className="w-5 h-5 rounded-full bg-emerald-600 border border-black"></div>
-            <div className="w-5 h-5 rounded-full bg-rose-600 border border-black -ml-2"></div>
-            <span className="text-[10px] font-medium text-white pl-1">2</span>
-          </div>
-        </div>
-
-        {/* --- MAIN GLASSMORPHIC PLANT CARD (FAR RIGHT) --- */}
-        <div className="absolute top-0 right-0 md:-right-6 w-[260px] md:w-[280px] bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] rounded-[32px] p-5 shadow-2xl flex flex-col justify-between group">
-          
-          {/* Isolated Plant Graphic Block */}
+          {/* Main Plant Asset Container */}
           <div className="relative bg-transparent rounded-2xl flex justify-center pt-2 pb-4">
             <img 
               src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&q=80&w=400" 
               alt="Aglaonema Plant" 
               className="h-48 object-contain transform group-hover:scale-105 transition-transform duration-500 z-10"
             />
-            {/* Tiny Floating Avatars Stack Inside Card */}
-            <div className="absolute top-12 right-2 bg-black/60 backdrop-blur-md p-1 rounded-full border border-white/10 flex -space-x-1.5 z-20">
-              <div className="w-4 h-4 rounded-full bg-cyan-500"></div>
-              <div className="w-4 h-4 rounded-full bg-amber-500"></div>
-              <div className="w-4 h-4 rounded-full bg-indigo-500"></div>
-            </div>
           </div>
 
-          {/* Plant Meta Details */}
+          {/* Plant Meta Description Details */}
           <div className="mt-2 space-y-3">
             <div>
               <span className="text-[11px] text-[#718779] uppercase tracking-wider font-medium block">Indoor Plant</span>
               <div className="flex items-center justify-between mt-0.5">
-                <h3 className="text-lg font-light text-white tracking-wide">Aglaonema plant</h3>
+                <h3 className="text-base font-light text-white tracking-wide">Aglaonema plant</h3>
                 <span className="text-white opacity-60 text-sm font-light">➔</span>
               </div>
             </div>
 
-            <button className="w-full border border-white/60 text-white bg-transparent py-2.5 rounded-xl text-xs font-light tracking-wide hover:bg-white hover:text-[#0a140e] transition-all duration-200">
+            <button className="w-full border border-white/40 text-white bg-transparent py-2.5 rounded-xl text-xs font-light tracking-wide hover:bg-white hover:text-[#0a140e] transition-all duration-200">
               Buy Now
             </button>
 
-            {/* Slider Dots */}
+            {/* Pagination Controls */}
             <div className="flex justify-center gap-1.5 pt-1">
               <span className="w-4 h-[2px] bg-white rounded-full"></span>
               <span className="w-1.5 h-[2px] bg-white/30 rounded-full"></span>
               <span className="w-1.5 h-[2px] bg-white/30 rounded-full"></span>
             </div>
+          </div>
+        </div>
+
+        {/* --- LARGE CIRCULAR FLOATING PROFILE BADGE LAYER --- */}
+        {/* Floating directly near the top of the right stack card */}
+        <div className="absolute -top-10 left-4 w-28 h-28 bg-neutral-900/60 backdrop-blur-md rounded-full border border-white/10 flex items-center justify-center p-1 shadow-2xl z-30">
+          <div className="grid grid-cols-2 gap-1 rounded-full overflow-hidden w-full h-full relative">
+            <img className="object-cover w-full h-full" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=100" alt="u1" />
+            <img className="object-cover w-full h-full" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=100" alt="u2" />
+            <img className="object-cover w-full h-full" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=100" alt="u3" />
+            <div className="bg-neutral-900 flex items-center justify-center text-xs font-bold text-white">T</div>
           </div>
         </div>
 
